@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/cors/:path*", "destination": "/api/cors" }
+  ],
+
+  "Routes" : [
+    {
+      "src": "/[^.]+",
+      "desr": "/",
+      "status": 200
+    }
+  ]
+}
