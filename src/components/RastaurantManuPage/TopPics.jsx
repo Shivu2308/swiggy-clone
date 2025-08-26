@@ -2,6 +2,7 @@ import React from 'react'
 import useScroller from '../../hooks/utilsHooks/useScroller';
 import { assets } from '../../assets/assets';
 import useTopPics from '../../hooks/RestaurantManuDataHooks/useTopPics';
+import AddToCartBtn from '../AddToCartBtn';
 
 const TopPics = ({ topPics, resInfo }) => {
     // console.log(topPics);
@@ -48,15 +49,15 @@ const TopPics = ({ topPics, resInfo }) => {
                 ref={containerRef}
                 className='flex items-center gap-5 transition duration-300 ease-in-out'>
                 {
-                    data.map(({ bannerId, creativeId, dish: { info: { price, defaultPrice, isVeg } } }) => (
+                    data.map(({ bannerId, creativeId, dish: { info } }) => (
 
                         <div key={bannerId} className='flex-shrink-0 w-[292px] h-[300px] relative'>
                             {/* {console.log(item)} */}
                             <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/${creativeId}`} alt="" />
                             <div className='absolute bottom-3 z-10 flex justify-between items-center w-full px-4'>
-                                <div className='font-bold text-sm text-[#ffffff]'>₹{defaultPrice / 100 || price / 100}</div>
+                                <div className='font-bold text-sm text-[#ffffff]'>₹{info?.defaultPrice / 100 || info?.price / 100}</div>
                                 <div className='flex flex-col text-center'>
-                                    <button className='bg-[#ffffff] font-extrabold shadow-lg text-base text-[rgb(27,166,114)] px-10 py-2 border rounded-lg hover:bg-[rgba(189,191,194,0.99)] duration-200'>ADD</button>
+                                    <AddToCartBtn info={info} resInfo={resInfo} />
                                     <span className='font-semibold text-xs text-white opacity-70'>Customisable</span>
                                 </div>
                             </div>

@@ -8,7 +8,7 @@ const SignInPage = () => {
 
 
     return (
-        <div className='w-[62%] ml-12 mt-8'>
+        <div className='w-4/5 sm:w-[62%] mx-auto sm:ml-12 mt-8'>
             <div className='mb-7'>
                 <img className='cursor-pointer'
                     onClick={handleLogin}
@@ -18,7 +18,7 @@ const SignInPage = () => {
                 {
                     userData ? 
 
-                    <div className='font-semibold text-3xl'> Log Out</div>
+                    <div className='font-semibold text-xl sm:text-3xl'> Log Out</div>
                     :
                 
                 <div className=''>

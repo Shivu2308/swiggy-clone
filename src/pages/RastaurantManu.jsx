@@ -28,14 +28,14 @@ const RastaurantManu = () => {
 
   return (
 
-    <div className=' w-[52vw] h-full mx-auto relative'>
+    <div className='sm:w-[70vw] md:w-[70vw] lg:w-[52vw] max-sm:mx-5 h-full mx-auto relative'>
       <div className='text-[10px] font-semibold flex gap-2 mt-7'>
         <span className='text-[#777] hover:text-[#000] cursor-pointer'><Link to={"/"}>Home</Link></span> /
         <span className='text-[#777] hover:text-[#000] cursor-pointer'> {resInfo?.city} </span>/
         <span className='text-[#000]'>{navTitle}</span>
       </div>
       <div className='w-full'>
-        <h1 className='font-extrabold text-2xl mt-10 ml-3'>{resInfo.name}</h1>
+        <h1 className='font-extrabold text-lg sm:text-2xl mt-10 ml-3'>{resInfo.name}</h1>
       </div>
       <div className='w-full mt-3 bg-gradient-to-t from-[#DFDFE7] to-white rounded-t-none rounded-[44px] flex justify-center items-center'>
         <div className='bg-white w-full m-5 border border-solid border-[#C0C0C0] border-opacity-80 rounded-3xl'>

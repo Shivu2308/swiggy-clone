@@ -8,6 +8,8 @@ const useRestaurantData = () => {
   const [topRestaurantData, setTopRestaurantData] = useState([]);
   const [topRestaurantTitle, setTopRestaurantTitle] = useState("");
   const [restaurantsWithOnlineFoodTitle, setRestaurantsWithOnlineFoodTitle] = useState("");
+  const [appLink, setAppLink] = useState({})
+  const [loading, setLoading] = useState(false);
 
   // const { cordinates: { lat, lng } } = useContext(Cordinates)
 
@@ -19,6 +21,7 @@ const useRestaurantData = () => {
 
   // Fetch Data
   async function fetchData() {
+    setLoading(true)
     try {
       const res = await fetch(
         `${import.meta.env.VITE_BASE_URL}/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
@@ -46,6 +49,12 @@ const useRestaurantData = () => {
       // console.log(result?.data?.cards?.find(data => data?.card?.card?.id === 'popular_restaurants_title')?.card?.card.title)
       let restaurants_With_Online_Food_Title = result?.data?.cards?.find((data) => data?.card?.card?.id === "popular_restaurants_title")?.card?.card.title;
       setRestaurantsWithOnlineFoodTitle(restaurants_With_Online_Food_Title);
+      let appLink = result?.data?.cards?.find((data) => data?.card?.card?.id === "app_install_links")?.card?.card;
+      // console.log(appLink);
+      setAppLink(appLink)
+      
+
+      setLoading(false)
     } catch (err) {
       console.error("Failed to fetch Swiggy data:", err);
     }
@@ -58,7 +67,7 @@ const useRestaurantData = () => {
   }, [lat, lng]);
 
 
-  return [unserviceable, filterVal, onyourMindTitle, onyourMind, topRestaurantData, topRestaurantTitle, restaurantsWithOnlineFoodTitle]
+  return [unserviceable, filterVal, onyourMindTitle, onyourMind, topRestaurantData, topRestaurantTitle, restaurantsWithOnlineFoodTitle, appLink, loading]
 
 
 };

@@ -9,14 +9,6 @@ const useRastaurantWithOnlineFood = () => {
 
   const filterOptions = [
     {
-      filterName: "Fast Delivery",
-      btnId: 1,
-    },
-    {
-      filterName: "New on Swiggy",
-      btnId: 2,
-    },
-    {
       filterName: "Ratings 4.0+",
       btnId: 3,
     },

@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const useOnYourMind = () => {
+const useTopRestaurantChain = () => {
   const widths = {
-    base: { class: "w-24", px: 112 },
-    sm: { class: "md:w-36", px: 168 },
+    base: { class: "w-[170px]", px: 202 },
+    lg: { class: "lg:w-[274px]", px: 306 },
   };
 
   // responsive itemWidth (resize pe update hota rahega)
@@ -11,8 +11,8 @@ const useOnYourMind = () => {
 
   useEffect(() => {
     const updateWidth = () => {
-      if (window.innerWidth >= 768) {
-        setItemWidth(widths.sm.px);
+      if (window.innerWidth >= 1024) {
+        setItemWidth(widths.lg.px);
       } else {
         setItemWidth(widths.base.px);
       }
@@ -23,7 +23,7 @@ const useOnYourMind = () => {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  return [ itemWidth ];
+  return [itemWidth];
 };
 
-export default useOnYourMind;
+export default useTopRestaurantChain;

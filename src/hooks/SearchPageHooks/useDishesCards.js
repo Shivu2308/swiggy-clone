@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleCardDetail } from "../../Utils/cardDetailSlice";
 import { setSameRastaurantDetail } from "../../Utils/toggleSlice";
 import { clearCartData } from "../../Utils/cartSlice";
+import { useEffect } from "react";
 
 const useDishesCards = ({info, resInfo}) => {
   const [isdifferentRestaurant, setIsdifferentRestaurant] = useState(false);
@@ -16,10 +17,10 @@ const useDishesCards = ({info, resInfo}) => {
 
     const dispatch = useDispatch()
 
-    function toggleDetails(info) {
+    function toggleDetails(id) {
         // setDekho((prev) => !prev)
         // console.log(id)
-        dispatch(toggleCardDetail(info))
+        dispatch(toggleCardDetail(id))
         // let card = info.filter((data) => data.id === id)
         // console.log(card)
     }

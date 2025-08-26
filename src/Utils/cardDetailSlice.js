@@ -8,8 +8,9 @@ const cardDetailSlice = createSlice({
   },
   reducers: {
     toggleCardDetail: (state, action) => {
-      state.cardDetailToggle =
-        state.cardDetailToggle === null ? action.payload : null;
+
+        state.cardDetailToggle = state.cardDetailToggle === null ? action.payload : null;
+        
     },
     setCardDetail : (state, action) => {
         state.cardDetail

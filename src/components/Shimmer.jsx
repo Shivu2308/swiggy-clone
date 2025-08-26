@@ -4,20 +4,20 @@ import { assets } from '../assets/assets'
 const Shimmer = () => {
   return (
     <div className='w-full'>
-      <div className='w-full bg-[#171A29] py-20 flex justify-center items-center flex-col gap-8'>
+      <div className='w-full bg-[#171A29] py-12 sm:py-16 md:py-20 flex justify-center items-center flex-col gap-8'>
         <div className='relative flex justify-center items-center'>
-          <div className='w-14 absolute z-10'>
+          <div className='w-8 sm:w-10 md:w-14 absolute z-10'>
             <img className='w-full' src={assets.icecreem_wwomsa} alt="" />
           </div>
-          <div className='h-20 w-20 bg-gradient-to-t from-[#ffffff] to-[rgba(79,79,79,0.1)] rounded-full relative flex items-center justify-center animate-spin'>
-            <div className='bg-[#171A29] absolute h-[70px] w-[70px] rounded-full'>
+          <div className='h-12 w-12 sm:h-14 sm:w-14 md:h-20 md:w-20 bg-gradient-to-t from-[#ffffff] to-[rgba(79,79,79,0.1)] rounded-full relative flex items-center justify-center animate-spin'>
+            <div className='bg-[#171A29] absolute h-[87%] w-[87%] rounded-full'>
             </div>
           </div>
         </div>
-        <h1 className='text-white font-bold text-2xl opacity-70'>Looking for great food near you...</h1>
+        <h1 className='text-white font-bold text-base sm:text-lg md:text-2xl opacity-70'>Looking for great food near you...</h1>
       </div>
-      <div className=' w-[70%] mx-auto flex gap-12'>
-        <div className='border-x-2 border-[#EEF0F5] pt-7'>
+      <div className=' w-100% sm:w-[70%] mx-auto flex gap-12 max-sm:p-14'>
+        <div className='border-x-2 mx-auto max-sm:w-full border-[#EEF0F5] pt-7'>
           {Array.from({ length: 7 }).map((_, index) => (
             <div key={index} className={'flex items-center py-5 pl-4 pr-24 gap-5 ' + (index === 0 ? 'bg-[#EEF0F5]' : 'bg-white')}>
               <div className={'w-10 h-10 rounded-full ' + (index === 0 ? 'bg-white' : 'bg-[#EEF0F5]')}></div>
@@ -26,12 +26,12 @@ const Shimmer = () => {
           ))}
         </div>
 
-        <div className='w-full'>
+        <div className='w-full hidden sm:block'>
           <div className='bg-[#EEF0F5] h-3 w-20 mt-16 mb-8'></div>
-          <div className='grid grid-cols-3 w-full gap-x-10'>
+          <div className='flex flex-wrap gap-5 '>
             {Array.from({ length: 6 }).map((_, index) => (
-              <div key={index} className='my-10 w-full'>
-                <div className='bg-[#EEF0F5] w-full pb-[60%]'></div>
+              <div key={index} className='my-10 mx-auto'>
+                <div className='bg-[#EEF0F5] w-44 lg:w-32 pb-[60%]'></div>
                 <div className='bg-[#EEF0F5] h-3 w-1/2 my-3'></div>
                 <div className='bg-[#EEF0F5] h-3 w-[35%]'></div>
               </div>

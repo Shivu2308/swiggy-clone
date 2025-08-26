@@ -27,28 +27,10 @@ const useNavbar = () => {
 
     const navItens = [
       {
-        name: "Swiggy Corporate",
-        src: assets.corporate,
-        path: "/SwiggyCorporate",
-        id: 1
-      },
-      {
         name: "Search",
         src: assets.search,
         path: "/Search",
         id: 2
-      },
-      {
-        name: "Offers",
-        src: assets.offers,
-        path: "/Offers",
-        id: 3
-      },
-      {
-        name: "Help",
-        src: assets.help,
-        path: "/Help",
-        id: 4
       },
       {
         name: "Sign In",

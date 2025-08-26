@@ -5,11 +5,12 @@ import TopRestaurantChain from '../components/HomeComponents/TopRestaurantChain'
 import RastaurantWithOnlineFood from '../components/HomeComponents/RastaurantWithOnlineFood';
 import useRestaurantData from '../hooks/HomePageHooks/useRestaurantData';
 import Shimmer from '../components/Shimmer';
+import Footer from '../components/Footer';
 
 
 const Body = () => {
 
-    const [unserviceable, filterVal, onyourMindTitle, onyourMind, topRestaurantData, topRestaurantTitle, restaurantsWithOnlineFoodTitle] = useRestaurantData()
+    const [unserviceable, filterVal, onyourMindTitle, onyourMind, topRestaurantData, topRestaurantTitle, restaurantsWithOnlineFoodTitle, appLink, loading] = useRestaurantData()
 
 
 
@@ -58,16 +59,24 @@ const Body = () => {
     }
 
     return (
-        <div className="w-full">
-            {topRestaurantData.length ? (<div className='w-[80%] mx-auto '>
-                {onyourMind?.length ? (<>
-                    <OnYourMind data={onyourMind} title={onyourMindTitle} />
-                    <TopRestaurantChain data={topRestaurantData} title={topRestaurantTitle} />
-                </>) : ""}
-                <RastaurantWithOnlineFood title={restaurantsWithOnlineFoodTitle} data={filterVal ? filteredData : topRestaurantData} />
-            </div>) : (<Shimmer />)}
+        <>
+            <div className="w-full">
+                {
+                    loading ?
+                        (<Shimmer />)
+                        :
+                        (<div className='w-[95%] sm:w-[90%] lg:w-[80%] mx-auto '>
+                            {onyourMind?.length ? (<>
+                                <OnYourMind data={onyourMind} title={onyourMindTitle} />
+                                <TopRestaurantChain data={topRestaurantData} title={topRestaurantTitle} />
+                            </>) : ""}
+                            <RastaurantWithOnlineFood title={restaurantsWithOnlineFoodTitle} data={filterVal ? filteredData : topRestaurantData} />
+                        </div>)
+                }
 
-        </div>
+            </div>
+            <Footer appLink={appLink}/>
+        </>
     );
 };
 

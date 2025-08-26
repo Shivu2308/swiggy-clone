@@ -33,7 +33,7 @@ const ItemCards = ({ info, resInfo }) => {
 
 
 
-                    <div className='font-extrabold opacity-80 mt-1 text-base'> {name}</div>
+                    <div className='font-extrabold opacity-80 mt-1 text-sm sm:text-base'> {name}</div>
                     {
                         finalPrice ?
                             <div className='font-bold flex items-center gap-1 mt-1'>
@@ -63,7 +63,7 @@ const ItemCards = ({ info, resInfo }) => {
                     }
                     <p
                         onClick={() => setExpanded(!expanded)}
-                        className='max-w-md break-words text-sm font-semibold mt-3 cursor-pointer'>
+                        className='max-w-md break-words text-xs sm:text-sm font-semibold mt-3 cursor-pointer'>
                         <span className='opacity-55'>{description ? (expanded ? description : shortText) : ""}</span>
                         {
                             description?.length > maxLenght &&
@@ -72,12 +72,10 @@ const ItemCards = ({ info, resInfo }) => {
                     </p>
                 </div>
                 {imageId ?
-                    <div className='w-40 h-36 flex-shrink-0 relative '>
+                    <div className=' w-28 h-28 sm:w-40 sm:h-40 flex-shrink-0 relative '>
                         <img className='w-full h-full object-cover rounded-2xl' src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/${imageId}`} alt="" />
-                        <div className='relative bottom-6 text-center'>
-
+                        <div className='relative bottom-6 left-1/2 -translate-x-1/2 text-center'>
                             <AddToCartBtn info={info} resInfo={resInfo} handleDifferentRasturant={handleDifferentRasturant} />
-
                             {addons &&
                                 <span className={'text-[11px] font-semibold opacity-50 leading-none absolute right-[27%] ' + (quantity ? '-bottom-[38px]' : '-bottom-4')}>Customisable</span>
                             }
@@ -96,7 +94,7 @@ const ItemCards = ({ info, resInfo }) => {
             </div>
 
             {isdifferentRestaurant &&
-                <div className='w-[35%] border p-8 shadow-[0_0_15px_rgba(0,0,0,0.3)] fixed bottom-8 z-50 bg-white left-1/2 translate-x-[-50%]'>
+                <div className='w-full md:w-[50%] sm:w-[35%] border p-8 shadow-[0_0_15px_rgba(0,0,0,0.3)] fixed bottom-8 z-50 bg-white left-1/2 translate-x-[-50%]'>
                     <h1 className='font-bold text-xl'>Items already in cart</h1>
                     <div className='text-sm opacity-80 mt-2'>Your cart contains items from other restaurant. Would you like to reset your cart for adding items from this restaurant?</div>
                     <div className='flex mt-5 gap-5 font-bold text-base'>

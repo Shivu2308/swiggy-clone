@@ -14,25 +14,25 @@ import DishesWuthSemRastaurant from '../components/SearchPageComponent/DishesWut
 import useSearch from '../hooks/SearchPageHooks/useSearch'
 
 const Search = () => {
-   
-    const [dishes, rastaurantsData, sameDish, sameDishWithRast, activeBtn, loading, filterOptions, handleFilterBtn, handleSearchQuery] =useSearch()
+
+    const [dishes, rastaurantsData, sameDish, sameDishWithRast, activeBtn, loading, filterOptions, handleFilterBtn, handleSearchQuery] = useSearch()
 
 
     return (
-        <div className='w-[58%] mx-auto'>
-            <div className='relative'>
+        <div className='w-full lg:w-[80%] xl:w-[58%] mx-auto'>
+            <div className='relative max-lg:mx-8 '>
                 <input
                     // onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyDown={handleSearchQuery}
-                    className='border-2 rounded p-3 w-full mt-12 font-bold focus:outline-none first-letter:uppercase' type="text" placeholder='Search for restaurants and food' />
+                    className='border-2 rounded p-3 w-full mt-12 font-bold  focus:outline-none first-letter:uppercase' type="text" placeholder='Search for restaurants and food' />
                 <div className='w-5 absolute right-3 bottom-3 '>
                     <img className='w-full' src={assets.search} alt="" />
                 </div>
             </div>
-            {loading ? (<SearchShimmer />) : (<>
+            {loading ? (<div className='w-full max-sm:mx-4 '><SearchShimmer /></div>) : (<>
                 {dishes.length === 0 ? "" :
                     (<>
-                        <div className='flex gap-2 mt-5'>
+                        <div className='flex gap-2 mx-8 mt-5'>
                             {!sameDish && filterOptions.map((filters) => (
                                 <div
                                     onClick={() => handleFilterBtn(filters.filterName)}
@@ -42,22 +42,24 @@ const Search = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className='bg-[#F2F3F5]'>
+                        <div className='bg-[#F2F3F5] mt-2'>
                             {sameDish ?
                                 (<DishesWuthSemRastaurant sameDish={sameDish} sameDishWithRast={sameDishWithRast} />)
                                 :
 
-                                (<div className='w-full bg-[#F2F3F5] p-3 grid grid-cols-2 gap-3 items-start mt-2 pb-8'>
+                                (<div className='w-full bg-[#F2F3F5] p-3 md:grid md:grid-cols-2 gap-3 items-start px-8 pb-8'>
                                     {activeBtn === "Dishes" ?
                                         (
                                             dishes?.map(({ card: { card } }, i) => (
-                                                <div key={i}>
+                                                <div key={i}
+                                                    className='my-2 shrink-0'>
                                                     <DishesCards data={card} />
                                                 </div>
                                             ))
                                         ) :
                                         rastaurantsData.map(({ card: { card } }, i) => (
-                                            <div key={i}>
+                                            <div key={i}
+                                                className='shrink-0'>
                                                 <RasturantCards data={card} />
                                             </div>
                                         ))}
