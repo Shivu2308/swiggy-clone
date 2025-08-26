@@ -1,13 +1,6 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/cors/:path*", "destination": "/api/cors" }
-  ],
-
-  "routes" : [
-    {
-      "src": "/[^.]+",
-      "desr": "/",
-      "status": 200
-    }
+    { "source": "/cors/(.*)", "destination": "/api/cors" }
   ]
 }
