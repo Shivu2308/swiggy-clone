@@ -7,7 +7,7 @@ const Shimmer = () => {
       <div className='w-full bg-[#171A29] py-12 sm:py-16 md:py-20 flex justify-center items-center flex-col gap-8'>
         <div className='relative flex justify-center items-center'>
           <div className='w-8 sm:w-10 md:w-14 absolute z-10'>
-            <img className='w-full' src={assets.icecreem_wwomsa} alt="" />
+            <img className='w-full' src={assets.icecreemwwomsa} alt="" />
           </div>
           <div className='h-12 w-12 sm:h-14 sm:w-14 md:h-20 md:w-20 bg-gradient-to-t from-[#ffffff] to-[rgba(79,79,79,0.1)] rounded-full relative flex items-center justify-center animate-spin'>
             <div className='bg-[#171A29] absolute h-[87%] w-[87%] rounded-full'>

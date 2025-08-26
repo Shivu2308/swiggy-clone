@@ -28,7 +28,7 @@ const SignInPage = () => {
                 </div>
                 }
                 <div className='w-[88px]'>
-                    <img className='w-full' src={assets.Image_login_btpq7r} alt="" />
+                    <img className='w-full' src={assets.imageloginbtpq7r} alt="" />
                 </div>
             </div>
             {

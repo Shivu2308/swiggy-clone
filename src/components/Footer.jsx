@@ -27,7 +27,7 @@ const Footer = ({ appLink }) => {
             <>
                 <div className='flex items-center mt-10'>
                     <div className=''>
-                        <img src={assets.swiggyIcon} alt="swiggyIcon" />
+                        <img src={assets.swiggyicon} alt="swiggyIcon" />
                     </div>
                     <div className='text-[#FF5200] text-3xl font-extrabold'>
                         Swiggy

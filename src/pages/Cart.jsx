@@ -91,7 +91,7 @@ const Cart = () => {
               key={data.id}
               className='flex items-center my-4 py-2 '
             >
-              <span className='w-3 mr-4'><img className='w-full' src={data?.isVeg === 1 ? assets.vegClassifier : assets.NonVegClassifier} alt="" /></span>
+              <span className='w-3 mr-4'><img className='w-full' src={data?.isVeg === 1 ? assets.vegclassifier : assets.nonvegclassifier} alt="" /></span>
 
               <span className='text-sm w-40 font-medium leading-none'>{data.name}</span>
 

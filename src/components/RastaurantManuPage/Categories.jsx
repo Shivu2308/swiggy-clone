@@ -17,7 +17,7 @@ const Categories = ({ categories, resInfo }) => {
             onClick={() => toggalManu(categoryId)}
             className='py-5 flex items-center justify-between cursor-pointer'>
             <div className='font-bold text-sm opacity-80'>{title} ({itemCards.length})</div>
-            <span className='cursor-pointer'><img src={openMenus.includes(categoryId) ? assets.arrowUp : assets.arrowDown} alt="" /></span>
+            <span className='cursor-pointer'><img src={openMenus.includes(categoryId) ? assets.arrowup : assets.arrowdown} alt="" /></span>
           </div>
           <hr
             className={`h-[2px] bg-[#d3d3d3] transition-all duration-300 ease-in-out

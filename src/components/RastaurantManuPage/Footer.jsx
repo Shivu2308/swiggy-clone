@@ -24,7 +24,7 @@ const Footer = ({ footerData }) => {
                 <div className='font-medium text-sm mt-1'>(Outlet:{outlate})</div>
                 <div className='flex gap-2 mt-3'>
                     <span className='w-3 mt-1'>
-                        <img className='w-3 opacity-60' src={assets.locationSvg} alt="" />
+                        <img className='w-3 opacity-60' src={assets.locationsvg} alt="" />
                     </span>
                     <span className='text-xs font-semibold text-[#aeaeaf]'>
                         {completeAddress}

@@ -39,7 +39,7 @@ const DishesCards = ({ data: { info, restaurant: { info: resInfo }, hideRestaura
                     <div className='p-4 flex justify-between items-center'>
                         <div>
                             <div className='w-4'>
-                                <img className='w-4' src={info.isVeg ? assets.vegClassifier : assets.NonVegClassifier} alt="" />
+                                <img className='w-4' src={info.isVeg ? assets.vegclassifier : assets.nonvegclassifier} alt="" />
                             </div>
                             <h1 className='font-bold text-lg text-[#414449] mt-1'>{info.name}</h1>
                             <div className='font-semibold text-[15px] '>{info.price ? "₹" + info.price / 100 : "₹" + info.defaultPrice / 100}</div>
@@ -70,7 +70,7 @@ const DishesCards = ({ data: { info, restaurant: { info: resInfo }, hideRestaura
                                 </div>
                             </div>
                             <div className='w-6 opacity-60'>
-                                <img className='w-full' src={assets.rightArrow} alt="" />
+                                <img className='w-full' src={assets.rightarrow} alt="" />
                             </div>
                         </div>
                     </Link>
@@ -80,7 +80,7 @@ const DishesCards = ({ data: { info, restaurant: { info: resInfo }, hideRestaura
                 <div className='flex justify-between mt-3'>
                     <div className='w-40 pb-5'>
                         <div className='w-4'>
-                            <img className='w-full' src={isVeg ? assets.vegClassifier : assets.NonVegClassifier} alt="" />
+                            <img className='w-full' src={isVeg ? assets.vegclassifier : assets.nonvegclassifier} alt="" />
                         </div>
                         <h1 className='font-bold text-lg text-[#414449] mt-1'>{name}</h1>
                         <div className='font-semibold text-[15px] '>{price ? "₹" + price / 100 : "₹" + defaultPrice / 100}</div>

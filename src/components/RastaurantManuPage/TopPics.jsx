@@ -31,7 +31,7 @@ const TopPics = ({ topPics, resInfo }) => {
                         className={`h-8 w-8 bg-slate-200 rounded-full flex justify-center items-center transition
                                     ${canScrollLeft ? 'cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
                     >
-                        <img className="w-5 h-5" src={assets.leftArrow} alt="Left" />
+                        <img className="w-5 h-5" src={assets.leftarrow} alt="Left" />
                     </div>
 
 
@@ -40,7 +40,7 @@ const TopPics = ({ topPics, resInfo }) => {
                         className={`h-8 w-8 bg-slate-200 rounded-full flex justify-center items-center transition
                                     ${canScrollRight ? 'cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
                     >
-                        <img className="w-5 h-5" src={assets.rightArrow} alt="Right" />
+                        <img className="w-5 h-5" src={assets.rightarrow} alt="Right" />
                     </div>
                 </div>
             </div>

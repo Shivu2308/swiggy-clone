@@ -34,7 +34,7 @@ const useNavbar = () => {
       },
       {
         name: "Sign In",
-        src: assets.signIn,
+        src: assets.signin,
         path: "/signin",
         id: 5
       },

@@ -56,7 +56,7 @@ const Navbar = () => {
                   className='flex gap-3 pl-4'>
                   {/* {console.log(data) */}
                   <div className='w-5 h-5 mt-1 flex-shrink-0'>
-                    <img className=' w-full h-full' src={assets.locationSvg} alt="" />
+                    <img className=' w-full h-full' src={assets.locationsvg} alt="" />
                   </div>
                   <div className='w-full'>
                     <div className='font-bold'>{data.structured_formatting.main_text}</div>
@@ -89,7 +89,7 @@ const Navbar = () => {
       <div className='relative'>
         <div className='w-full shadow-md h-20 flex justify-between items-center  px-5 sm:px-20 lg:px-28 xl:px-40'>
           <div className='flex gap-4 sm-gap-6 md:gap-12 justify-center items-center'>
-            <Link to={"/"} ><div className='rounded-xl hover:scale-[1.1] duration-100 w-10 h-10 sm:w-12 sm:h-12 overflow-hidden cursor-pointer'><img className='h-full w-full object-cover' src={assets.swiggyIcon} alt="" /></div></Link>
+            <Link to={"/"} ><div className='rounded-xl hover:scale-[1.1] duration-100 w-10 h-10 sm:w-12 sm:h-12 overflow-hidden cursor-pointer'><img className='h-full w-full object-cover' src={assets.swiggyicon} alt="" /></div></Link>
             <div
               onClick={toggleSearchCOntainer}
               className='flex justify-center items-center cursor-pointer group'>

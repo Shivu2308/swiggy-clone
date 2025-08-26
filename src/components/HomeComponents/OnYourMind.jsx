@@ -22,7 +22,7 @@ const OnYourMind = ({ data, title }) => {
                             className={`h-6 w-6 sm:h-8 sm:w-8 bg-slate-200 rounded-full flex justify-center items-center transition
                             ${canScrollLeft ? 'cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
                         >
-                            <img className="h-4 w-4 sm:h-5 sm:w-5" src={assets.leftArrow} alt="Left" />
+                            <img className="h-4 w-4 sm:h-5 sm:w-5" src={assets.leftarrow} alt="Left" />
                         </div>
 
 
@@ -31,7 +31,7 @@ const OnYourMind = ({ data, title }) => {
                             className={`h-6 w-6 sm:h-8 sm:w-8 bg-slate-200 rounded-full flex justify-center items-center transition
                             ${canScrollRight ? 'cursor-pointer' : 'opacity-50 cursor-not-allowed'}`}
                         >
-                            <img className="h-4 w-4 sm:h-5 sm:w-5" src={assets.rightArrow} alt="Right" />
+                            <img className="h-4 w-4 sm:h-5 sm:w-5" src={assets.rightarrow} alt="Right" />
                         </div>
                     </div>
                 </div>

@@ -1,60 +1,60 @@
 import cart from "./cart.svg"
 import corporate from "./corporate.svg"
-import downArrow from "./down-arrow.svg"
+import downarrow from "./downarrow.svg"
 import offers from "./offers.svg"
 import search from "./search.svg"
-import signIn from "./sign-in.svg"
-import swiggyIcon from "./swiggyIcon.svg"
-import rightArrow from "./arrow-right.svg"
+import signin from "./signin.svg"
+import swiggyicon from "./swiggyicon.svg"
+import rightarrow from "./arrowright.svg"
 import help from "./help.svg"
-import leftArrow from "./arrow-left.svg"
+import leftarrow from "./arrowleft.svg"
 import reting from './reting.svg'
-import arrowDown from './arrowe-Down.svg'
-import arrowUp from './arrow-up.svg'
+import arrowdown from './arrowdown.svg'
+import arrowup from './arrowup.svg'
 import star from './star.svg'
 import tag from './tag.svg'
-import nonVeg from './nonVeg.svg'
+import nonveg from './nonveg.svg'
 import veg from './veg.svg'
-import locationSvg from './location.svg'
+import locationsvg from './location.svg'
 import cancle from './cancle.svg'
 import gps from './gps.svg'
-import recentSearch from './recentSearch.svg'
-import vegClassifier from './vegClassifier.jpg'
-import NonVegClassifier from './NonVegClassifier.jpg'
-import chackout_cart from './Checkout_Cart.avif'
+import recentSearch from './recentsearch.svg'
+import vegclassifier from './vegclassifier.jpg'
+import nonvegclassifier from './noncegclassifier.jpg'
+import chackoutcart from './checkoutcart.avif'
 import filter from './filter.svg'
-import Image_login_btpq7r from './Image-login_btpq7r.avif'
+import imageloginbtpq7r from './imageloginbtpq7r.avif'
 import right from './right.svg'
-import icecreem_wwomsa from './icecream_wwomsa.avif'
+import icecreemwwomsa from './icecreamwwomsa.avif'
 
 
 export const assets = {
     cart,
     corporate,
-    downArrow,
+    downarrow,
     offers,
     search,
-    signIn,
-    swiggyIcon,
+    signin,
+    swiggyicon,
     help,
-    rightArrow,
-    leftArrow,
+    rightarrow,
+    leftarrow,
     reting,
-    arrowDown,
-    arrowUp,
+    arrowdown,
+    arrowup,
     star,
     tag,
-    nonVeg,
+    nonveg,
     veg,
-    locationSvg,
+    locationsvg,
     cancle,
     gps,
     recentSearch,
-    vegClassifier,
-    NonVegClassifier,
-    chackout_cart,
+    vegclassifier,
+    nonvegclassifier,
+    chackoutcart,
     filter,
-    Image_login_btpq7r,
+    imageloginbtpq7r,
     right,
-    icecreem_wwomsa
+    icecreemwwomsa
 }

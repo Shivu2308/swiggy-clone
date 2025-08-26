@@ -69,6 +69,7 @@ const RastaurantManu = () => {
       <MenuData menuData={menuData} resInfo={resInfo} />
       <Footer footerData={footerData} />
       <ChackCartBar />
+      
     </div>
   )
 }

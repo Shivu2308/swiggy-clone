@@ -25,7 +25,7 @@ const ItemCards = ({ info, resInfo }) => {
                         </div>) :
                         (<div className='flex gap-1'>
                             <span className='flex border-[2px] border-red-700 rounded-[5px] justify-center items-center'>
-                                <img className='h-[10px] m-[3px]' src={assets.nonVeg} alt="" />
+                                <img className='h-[10px] m-[3px]' src={assets.nonveg} alt="" />
                             </span>
                             <span className='text-red-500 font-semibold text-sm opacity-80'>{text && text}</span>
                         </div>)}

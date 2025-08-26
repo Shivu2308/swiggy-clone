@@ -19,7 +19,7 @@ const MenuData = ({ menuData, resInfo }) => {
               <h1 className='font-extrabold text-base'>{title} ({itemCards ? (itemCards).length : (categories).length})</h1>
               {itemCards ? (<span
                 className=''>
-                <img src={openMenus.includes(categoryId) ? assets.arrowUp : assets.arrowDown} alt="" />
+                <img src={openMenus.includes(categoryId) ? assets.arrowup : assets.arrowdown} alt="" />
               </span>) : null}
 
             </div>
