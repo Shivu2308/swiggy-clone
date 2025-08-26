@@ -25,7 +25,7 @@ import chackoutcart from './checkoutcart.avif'
 import filter from './filter.svg'
 import imageloginbtpq7r from './imageloginbtpq7r.avif'
 import right from './right.svg'
-import icecreemwwomsa from './icecreamwwomsa.avif'
+import icecreamwwomsa from './icecreamwwomsa.avif'
 
 
 export const assets = {
@@ -56,5 +56,5 @@ export const assets = {
     filter,
     imageloginbtpq7r,
     right,
-    icecreemwwomsa
+    icecreamwwomsa
 }
