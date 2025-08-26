@@ -3,7 +3,7 @@
     { "source": "/cors/:path*", "destination": "/api/cors" }
   ],
 
-  "Routes" : [
+  "routes" : [
     {
       "src": "/[^.]+",
       "desr": "/",
