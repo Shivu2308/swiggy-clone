@@ -86,7 +86,7 @@ export const SearchShimmer = () => {
 export const MenuShimmer = () => {
   
   return (
-    <div className='w-full mx-auto'>
+    <div className='sm:w-[70vw] md:w-[70vw] lg:w-[52vw] max-sm:mx-5 mx-auto'>
       <div className='bg-[#EEF0F5] h-4'></div>
       <div className='bg-white mx-4 h-10 '>
         <div className='bg-[#EEF0F5] h-3 w-20 my-8'></div>
