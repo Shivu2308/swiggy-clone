@@ -1,6 +1,5 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/cors/(.*)", "destination": "/api/cors" }
+  "routes": [
+    { "source": "/(.*)", "destination": "/", "status": 200 }
   ]
 }

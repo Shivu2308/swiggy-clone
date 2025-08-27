@@ -9,6 +9,7 @@ const useRestaurantManuData = () => {
   const [topPics, setTopPics] = useState(null);
   const [menuData, setMenuData] = useState([]);
   const [footerData, setFooterData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   // const { cordinates: { lat, lng } } = useContext(Cordinates)
   const { lat, lng } = useSelector((state) => state.cordinatesSlice.cordinates);
@@ -76,7 +77,7 @@ const useRestaurantManuData = () => {
     fetchMenu();
   }, []);
 
-  return [navTitle, resInfo, deals, topPics, menuData, footerData];
+  return [navTitle, resInfo, deals, topPics, menuData, footerData, loading];
 };
 
 export default useRestaurantManuData;

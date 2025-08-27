@@ -86,13 +86,13 @@ export const SearchShimmer = () => {
 export const MenuShimmer = () => {
   
   return (
-    <div className='w-[52vw] mx-auto'>
+    <div className='w-full mx-auto'>
       <div className='bg-[#EEF0F5] h-4'></div>
       <div className='bg-white mx-4 h-10 '>
         <div className='bg-[#EEF0F5] h-3 w-20 my-8'></div>
-        <div className='flex gap-5 items-center w-full'>
+        <div className='sm:flex sm:gap-5 sm:items-center  w-full'>
           {Array.from({ length: 2 }).map((_, length) =>
-            <div key={length} className='w-full'>
+            <div key={length} className='w-full max-sm:mt-10'>
               <div className='w-full bg-[#EEF0F5] pb-[60%] my-4'></div>
               <div className='relative'>
                 <div className='h-2 w-[40%] bg-[#EEF0F5]'></div>
