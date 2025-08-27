@@ -19,7 +19,8 @@ import locationsvg from './location.svg'
 import cancle from './cancle.svg'
 import gps from './gps.svg'
 import recentSearch from './recentsearch.svg'
-import vegclassifier from './vegclassifier.jpg'
+import vegclassifier from "./vegclassifier.jpg";
+
 import nonvegclassifier from './nonvegclassifier.jpg'
 import chackoutcart from './checkoutcart.avif'
 import filter from './filter.svg'
