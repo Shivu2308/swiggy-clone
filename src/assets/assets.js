@@ -13,7 +13,7 @@ import arrowdown from './arrowdown.svg'
 import arrowup from './arrowup.svg'
 import star from './star.svg'
 import tag from './tag.svg'
-import nonveg from './nonveg.svg'
+import nonveg from "./nonveg.svg";
 import veg from './veg.svg'
 import locationsvg from './location.svg'
 import cancle from './cancle.svg'
