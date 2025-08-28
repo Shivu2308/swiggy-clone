@@ -5,6 +5,7 @@ import { assets } from '../assets/assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCartData, itemAddToCart, removeFromCart } from '../Utils/cartSlice';
 import { useRazorpay } from 'react-razorpay';
+import toast from 'react-hot-toast';
 
 const Cart = () => {
 
@@ -58,11 +59,12 @@ const Cart = () => {
       description: "Test Transaction",
 
       handler: function (response) {
-        alert("Payment Successful!");
+        toast.success("Payment Successful!");
         alert("Payment ID: " + response.razorpay_payment_id);
         // alert("Order ID: " + response.razorpay_order_id);
         // alert("Signature: " + response.razorpay_signature);
-
+        
+        dispatch(clearCartData())
         // Agar chahe to localStorage ya Redux me bhi save kar sakte ho
         // localStorage.setItem("lastPaymentId", response.razorpay_payment_id);
       },
@@ -71,7 +73,6 @@ const Cart = () => {
         color: "#FF5200",
       },
     };
-    dispatch(clearCartData())
 
     const razorpayInstance = new Razorpay(options);
     razorpayInstance.open();
