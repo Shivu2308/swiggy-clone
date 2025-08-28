@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleLoginBar } from "../../Utils/toggleSlice";
 import { addUserData, removeUserData } from "../../Utils/authSlice";
 import { useNavigate } from "react-router-dom";
-import { signInWithPopup, signInWithRedirect, signOut } from "firebase/auth";
+import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, provider } from "../../config/firebaceAuth";
 
 const useSignInPage = () => {
@@ -18,7 +18,7 @@ const useSignInPage = () => {
   async function handleAuth() {
 
     try {
-      let data = await signInWithRedirect(auth, provider);
+      let data = await signInWithPopup(auth, provider);
       // console.log(data)
       const userData = {
         name: data.user.displayName,
