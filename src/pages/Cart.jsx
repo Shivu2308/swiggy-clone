@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 import { assets } from '../assets/assets';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCartData, itemAddToCart, removeFromCart } from '../Utils/cartSlice';
+import { useRazorpay } from 'react-razorpay';
 
 const Cart = () => {
+
+  const { error, isLoading, Razorpay } = useRazorpay();
   // const [resInfoCart, setResInfoCart] = useState(1)
   // const { cartData, setCartData } = useContext(CartContext);
   const cartData = useSelector((state) => state.cartSlice.cartData)
@@ -16,6 +19,7 @@ const Cart = () => {
   // console.log(restInfo);
 
   const dispatch = useDispatch()
+
 
 
   let totalPrice = cartData?.reduce((acc, data) => acc + (data.finalPrice ? (data.finalPrice / 100) * data.itemQuantity : (data.price / 100) * data.itemQuantity || (data.defaultPrice / 100) * data.itemQuantity), 0)
@@ -44,6 +48,37 @@ const Cart = () => {
   function clearCartItem() {
     dispatch(clearCartData())
   }
+
+  const handlePayment = () => {
+    const options = {
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+      amount: totalPrice * 100, // paise me
+      currency: "INR",
+      name: "My App",
+      description: "Test Transaction",
+
+      handler: function (response) {
+        alert("Payment Successful!");
+        alert("Payment ID: " + response.razorpay_payment_id);
+        // alert("Order ID: " + response.razorpay_order_id);
+        // alert("Signature: " + response.razorpay_signature);
+
+        // Agar chahe to localStorage ya Redux me bhi save kar sakte ho
+        // localStorage.setItem("lastPaymentId", response.razorpay_payment_id);
+      },
+      
+      theme: {
+        color: "#FF5200",
+      },
+    };
+    dispatch(clearCartData())
+
+    const razorpayInstance = new Razorpay(options);
+    razorpayInstance.open();
+  };
+
+
+
 
   if (!cartData || cartData.length === 0) {
     return (
@@ -120,7 +155,7 @@ const Cart = () => {
         </div>
         <div className='flex justify-between items-center px-5 my-5'>
           <button onClick={clearCartItem} className='px-4 py-2 bg-red-300 rounded-3xl'>clear cart</button>
-          <button className='px-4 py-2 bg-green-400 rounded-3xl'>Order Now</button>
+          <button onClick={handlePayment} className='px-4 py-2 bg-green-400 rounded-3xl'>Order Now</button>
         </div>
       </div>
     </div>

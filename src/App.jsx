@@ -41,6 +41,7 @@ function App() {
                 <Route path='/cart' element={<Cart />} />
                 <Route path='/Search' element={<Search />} />
                 {/* <Route path='/signin' element={<SignInPage />} /> */}
+                
                 <Route path='/*' element={<h>comming soon....</h>} />
               </Route>
             </Routes>
