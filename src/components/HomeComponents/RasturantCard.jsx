@@ -10,7 +10,7 @@ const RasturantCard = ( info ) => {
     return (
   
         <Link to={`/city/${city}/${link}`}>
-            <div className='w-full h-32 lg:h-[182px] rounded-xl overflow-hidden relative'>
+            <div className='w-full h-[182px] custom:h-32 lg:h-[182px] rounded-xl overflow-hidden relative'>
                 <img
                     key={info.id}
                     className="w-full h-full object-cover"

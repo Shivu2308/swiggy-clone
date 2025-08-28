@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'custom': '450px', // 👈 apna custom breakpoint
+      },
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio'),],
 }

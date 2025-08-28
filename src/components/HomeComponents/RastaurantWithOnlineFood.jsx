@@ -27,10 +27,10 @@ const RastaurantWithOnlineFood = ({ title, data }) => {
 
             </div>
 
-            <div className='flex flex-wrap gap-8 max-sm:justify-evenly lg:justify-evenly  px-1 mt-7'>
+            <div className='flex flex-wrap gap-8 justify-evenly max-sm:justify-evenly lg:justify-evenly  px-1 mt-7'>
                 {data?.map(({ info, cta: { link } }) => (
 
-                    <div key={info.id} className='w-[170px] lg:w-[274px] shrink-0 rounded-xl hover:scale-90 duration-100 cursor-pointer'>
+                    <div key={info.id} className='w-[274px] custom:w-[170px] lg:w-[274px] shrink-0 rounded-xl hover:scale-90 duration-100 cursor-pointer'>
                         <RasturantCard {...info} link={link} />
                     </div>
                 ))}
