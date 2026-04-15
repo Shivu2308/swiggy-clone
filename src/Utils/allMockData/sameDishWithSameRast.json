@@ -1,0 +1,609 @@
+[{
+  "statusCode": 0,
+  "data": {
+    "statusMessage": "done successfully",
+    "cards": [
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.Label",
+            "text": "Item added to cart",
+            "textColor": "#282c3f",
+            "fontSize": 15,
+            "fontName": "FONT_NAME_SEMI_BOLD",
+            "alignment": "ALIGNMENT_LEFT",
+            "lineSpacing": 2,
+            "margin": {
+              "top": 8
+            },
+            "padding": {
+              "left": 16,
+              "top": 15,
+              "right": 16,
+              "bottom": 15
+            },
+            "containerBackgroundColor": "#f2f3f7",
+            "backgroundColor": "#f2f3f7",
+            "maxLines": 2
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+            "info": {
+              "id": "123026029",
+              "name": "Farmhouse Pizza",
+              "category": "Italian Connection",
+              "description": "A garden-fresh delight! Loaded with colorful veggies—sweet corn, juicy mushrooms, ripe tomatoes, crunchy onions, and crisp capsicum—all atop a rich, cheesy base for a vibrant pizza bursting with flavor.",
+              "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/3/15/75e5e20e-1697-46a7-9f2c-6267f46481b1_2726677b-1208-4120-93e2-a670096f27f0.jpg",
+              "inStock": 1,
+              "isVeg": 1,
+              "price": 29900,
+              "variants": {
+
+              },
+              "variantsV2": {
+
+              },
+              "maxAddons": -1,
+              "maxFreeAddons": -1,
+              "addons": [
+                {
+                  "groupId": "244158945",
+                  "groupName": "Fries",
+                  "choices": [
+                    {
+                      "id": "139740941",
+                      "name": "French Fries",
+                      "price": 14400,
+                      "inStock": 1,
+                      "isVeg": 1,
+                      "isEnabled": 1
+                    },
+                    {
+                      "id": "139740945",
+                      "name": "Piri Piri Fries - New",
+                      "price": 15400,
+                      "inStock": 1,
+                      "isVeg": 1,
+                      "isEnabled": 1
+                    }
+                  ],
+                  "maxAddons": 2,
+                  "maxFreeAddons": -1
+                }
+              ],
+              "ribbon": {
+
+              },
+              "itemBadge": {
+
+              },
+              "badgesV2": {
+
+              },
+              "ratings": {
+                "aggregatedRating": {
+                  "rating": "3.4",
+                  "ratingCount": "19 ratings",
+                  "ratingCountV2": "19"
+                },
+                "ratingsPresentationConfig": {
+                  "bgGradient": {
+                    "colours": [
+                      "#D9EFEC",
+                      "#00FFFFFF"
+                    ],
+                    "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                  },
+                  "ratingIconColor": "rating_medium",
+                  "ratingTextColor": "rating_medium",
+                  "ratingCountTextColor": "rating_medium",
+                  "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                  "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                }
+              },
+              "parentId": "59788489"
+            },
+            "analytics": {
+              "screenName": "explore-dish-widget",
+              "context": "{\"tid\":\"undefined\",\"grid\":\"1800ac1e-7bb6-4f0c-9163-c3a9889502b8\",\"queryUniqueId\":\"\",\"query\":\"pizza\"}",
+              "objectValue": "123026029",
+              "clickObjectName": "click-item"
+            },
+            "restaurant": {
+              "info": {
+                "id": "746975",
+                "name": "Haldiram's Restaurant",
+                "city": "18",
+                "slugs": {
+                  "restaurant": "haldiram's-restaurant-vijay-nagar-vijay-nagar",
+                  "city": "indore"
+                },
+                "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/6/2997005d-939d-4dbf-95a4-bfe419744d3e_746975.JPG",
+                "address": "UPPER FROUND FLOOR,PLOT NO.17,SCHEME NO.54,PU-3, COMMERCIAL OPP. C-21 MALL, WARD NO.29,ZONE NO. 07,INDORE , Indore, Indore, Madhya Pradesh-452010",
+                "locality": "Opp.C-21 Mall",
+                "areaName": "Vijay Nagar",
+                "costForTwo": "40000",
+                "costForTwoMessage": "₹400 FOR TWO",
+                "cuisines": [
+                  "North Indian",
+                  "Chaat",
+                  "Chinese",
+                  "South Indian",
+                  "Fast Food",
+                  "Snacks",
+                  "sandwich",
+                  "Burger",
+                  "pizza",
+                  "Pasta"
+                ],
+                "feeDetails": {
+
+                },
+                "parentId": "351771",
+                "avgRatingString": "--",
+                "sla": {
+                  "deliveryTime": 46,
+                  "minDeliveryTime": 45,
+                  "maxDeliveryTime": 50,
+                  "lastMileTravel": 8.6,
+                  "serviceability": "SERVICEABLE",
+                  "rainMode": "RAIN_MODE_NONE",
+                  "slaString": "45-50 MINS",
+                  "lastMileTravelString": "8.6 km",
+                  "iconType": "ICON_TYPE_EMPTY"
+                },
+                "availability": {
+                  "opened": true,
+                  "restaurantClosedMeta": {
+
+                  }
+                },
+                "aggregatedDiscountInfo": {
+                  "visible": true
+                },
+                "badges": {
+                  "imageBadges": [
+                    {
+                      "imageId": "brand_cards/Badges%202026/126_Best%20in%20Pure%20Veg2026.png",
+                      "description": "Best in Pure Veg"
+                    },
+                    {
+                      "imageId": "brand_cards/Badges%202026/57_Best%20in%20Indian%20Sweets2026.png",
+                      "description": "Best in Indian Sweets"
+                    },
+                    {
+                      "imageId": "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png",
+                      "description": "Best in Corporate"
+                    },
+                    {
+                      "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                      "description": "OnlyOnSwiggy"
+                    },
+                    {
+                      "imageId": "v1695133679/badges/Pure_Veg111.png",
+                      "description": "pureveg"
+                    }
+                  ]
+                },
+                "aggregatedDiscountInfoV2": {
+                  "visible": true
+                },
+                "cartOrderabilityNudgeBanner": {
+                  "parameters": {
+
+                  },
+                  "presentation": {
+
+                  }
+                },
+                "externalRatings": {
+                  "aggregatedRating": {
+                    "rating": "4.7",
+                    "ratingCount": "3.1K+"
+                  },
+                  "source": "GOOGLE",
+                  "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                },
+                "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                "featuredSectionInfo": {
+
+                },
+                "showEoOffer": true
+              },
+              "analytics": {
+                "screenName": "explore-dish-widget",
+                "context": "{\"tid\":\"undefined\",\"grid\":\"1800ac1e-7bb6-4f0c-9163-c3a9889502b8\",\"queryUniqueId\":\"\",\"query\":\"pizza\"}",
+                "objectValue": "746975",
+                "impressionObjectName": "impression-restaurant",
+                "clickObjectName": "click-dish-search-full-menu"
+              }
+            }
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.Collection",
+            "title": "More dishes from this restaurant",
+            "cards": [
+              {
+                "card": {
+                  "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                  "info": {
+                    "id": "123025911",
+                    "name": "Margherita Pizza",
+                    "category": "Italian Connection",
+                    "description": "Simple yet irresistible! A classic-crust pizza layered with zesty tomato sauce and creamy mozzarella—a timeless Italian favorite that never goes out of style.",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2025/5/26/c687ab2f-2890-4142-91af-f47f2e1c2d7d_1b03a6e9-d7d8-419a-8ec1-a1474677f3ce.jpg_compressed",
+                    "inStock": 1,
+                    "isVeg": 1,
+                    "price": 25400,
+                    "variants": {
+
+                    },
+                    "variantsV2": {
+
+                    },
+                    "maxAddons": -1,
+                    "maxFreeAddons": -1,
+                    "addons": [
+                      {
+                        "groupId": "244136573",
+                        "groupName": "Fries",
+                        "choices": [
+                          {
+                            "id": "139740941",
+                            "name": "French Fries",
+                            "price": 14400,
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "isEnabled": 1
+                          },
+                          {
+                            "id": "139740945",
+                            "name": "Piri Piri Fries - New",
+                            "price": 15400,
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "isEnabled": 1
+                          }
+                        ],
+                        "maxAddons": 2,
+                        "maxFreeAddons": -1
+                      }
+                    ],
+                    "ribbon": {
+
+                    },
+                    "itemBadge": {
+
+                    },
+                    "badgesV2": {
+
+                    },
+                    "ratings": {
+                      "aggregatedRating": {
+                        "rating": "4.3",
+                        "ratingCount": "11 ratings",
+                        "ratingCountV2": "11"
+                      },
+                      "ratingsPresentationConfig": {
+                        "bgGradient": {
+                          "colours": [
+                            "#C8F9E5",
+                            "#00FFFFFF"
+                          ],
+                          "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                        },
+                        "ratingIconColor": "rating_very_good",
+                        "ratingTextColor": "rating_very_good",
+                        "ratingCountTextColor": "rating_very_good",
+                        "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                        "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                      }
+                    },
+                    "parentId": "54863427"
+                  },
+                  "analytics": {
+                    "screenName": "explore-dish-widget",
+                    "context": "{\"tid\":\"undefined\",\"grid\":\"1800ac1e-7bb6-4f0c-9163-c3a9889502b8\",\"queryUniqueId\":\"\",\"query\":\"pizza\"}",
+                    "objectValue": "123025911",
+                    "clickObjectName": "click-item"
+                  },
+                  "hideRestaurantDetails": true
+                }
+              },
+              {
+                "card": {
+                  "@type": "type.googleapis.com/swiggy.presentation.food.v2.Dish",
+                  "info": {
+                    "id": "123025915",
+                    "name": "Spicy Paneer Pizza",
+                    "category": "Italian Connection",
+                    "description": "Spicy paneer chunks and pizza sauces spread across fresh pan pizza base done to perfection!",
+                    "imageId": "FOOD_CATALOG/IMAGES/CMS/2024/4/26/eb4926af-e2a8-488a-875e-c4a38e90a6b5_04cfcea2-ca93-49f0-990f-100e989098e9.jpg_compressed",
+                    "inStock": 1,
+                    "isVeg": 1,
+                    "price": 30900,
+                    "variants": {
+
+                    },
+                    "variantsV2": {
+
+                    },
+                    "maxAddons": -1,
+                    "maxFreeAddons": -1,
+                    "addons": [
+                      {
+                        "groupId": "244136558",
+                        "groupName": "Fries",
+                        "choices": [
+                          {
+                            "id": "139740941",
+                            "name": "French Fries",
+                            "price": 14400,
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "isEnabled": 1
+                          },
+                          {
+                            "id": "139740945",
+                            "name": "Piri Piri Fries - New",
+                            "price": 15400,
+                            "inStock": 1,
+                            "isVeg": 1,
+                            "isEnabled": 1
+                          }
+                        ],
+                        "maxAddons": 2,
+                        "maxFreeAddons": -1
+                      }
+                    ],
+                    "ribbon": {
+
+                    },
+                    "itemBadge": {
+
+                    },
+                    "badgesV2": {
+
+                    },
+                    "ratings": {
+                      "aggregatedRating": {
+                        "rating": "4.3",
+                        "ratingCount": "13 ratings",
+                        "ratingCountV2": "13"
+                      },
+                      "ratingsPresentationConfig": {
+                        "bgGradient": {
+                          "colours": [
+                            "#C8F9E5",
+                            "#00FFFFFF"
+                          ],
+                          "gradientDirection": "GRADIENT_DIRECTION_LEFT_TO_RIGHT"
+                        },
+                        "ratingIconColor": "rating_very_good",
+                        "ratingTextColor": "rating_very_good",
+                        "ratingCountTextColor": "rating_very_good",
+                        "ratingFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD",
+                        "ratingCountFontName": "FONT_NAME_V2_OVERLINE_NEUTRAL_BOLD"
+                      }
+                    },
+                    "parentId": "59475233"
+                  },
+                  "analytics": {
+                    "screenName": "explore-dish-widget",
+                    "context": "{\"tid\":\"undefined\",\"grid\":\"1800ac1e-7bb6-4f0c-9163-c3a9889502b8\",\"queryUniqueId\":\"\",\"query\":\"pizza\"}",
+                    "objectValue": "123025915",
+                    "clickObjectName": "click-item"
+                  },
+                  "hideRestaurantDetails": true
+                }
+              }
+            ],
+            "groupBy": {
+              "card": {
+                "card": {
+                  "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+                  "info": {
+                    "id": "746975",
+                    "name": "Haldiram's Restaurant",
+                    "city": "18",
+                    "slugs": {
+                      "restaurant": "haldiram's-restaurant-vijay-nagar-vijay-nagar",
+                      "city": "indore"
+                    },
+                    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/3/6/2997005d-939d-4dbf-95a4-bfe419744d3e_746975.JPG",
+                    "address": "UPPER FROUND FLOOR,PLOT NO.17,SCHEME NO.54,PU-3, COMMERCIAL OPP. C-21 MALL, WARD NO.29,ZONE NO. 07,INDORE , Indore, Indore, Madhya Pradesh-452010",
+                    "locality": "Opp.C-21 Mall",
+                    "areaName": "Vijay Nagar",
+                    "costForTwo": "40000",
+                    "costForTwoMessage": "₹400 FOR TWO",
+                    "cuisines": [
+                      "North Indian",
+                      "Chaat",
+                      "Chinese",
+                      "South Indian",
+                      "Fast Food",
+                      "Snacks",
+                      "sandwich",
+                      "Burger",
+                      "pizza",
+                      "Pasta"
+                    ],
+                    "feeDetails": {
+
+                    },
+                    "parentId": "351771",
+                    "avgRatingString": "--",
+                    "sla": {
+                      "deliveryTime": 46,
+                      "minDeliveryTime": 45,
+                      "maxDeliveryTime": 50,
+                      "lastMileTravel": 8.6,
+                      "serviceability": "SERVICEABLE",
+                      "rainMode": "RAIN_MODE_NONE",
+                      "slaString": "45-50 MINS",
+                      "lastMileTravelString": "8.6 km",
+                      "iconType": "ICON_TYPE_EMPTY"
+                    },
+                    "availability": {
+                      "opened": true,
+                      "restaurantClosedMeta": {
+
+                      }
+                    },
+                    "aggregatedDiscountInfo": {
+                      "visible": true
+                    },
+                    "badges": {
+                      "imageBadges": [
+                        {
+                          "imageId": "brand_cards/Badges%202026/126_Best%20in%20Pure%20Veg2026.png",
+                          "description": "Best in Pure Veg"
+                        },
+                        {
+                          "imageId": "brand_cards/Badges%202026/57_Best%20in%20Indian%20Sweets2026.png",
+                          "description": "Best in Indian Sweets"
+                        },
+                        {
+                          "imageId": "brand_cards/Badges%202026/85_Best%20in%20Corporate2026.png",
+                          "description": "Best in Corporate"
+                        },
+                        {
+                          "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                          "description": "OnlyOnSwiggy"
+                        },
+                        {
+                          "imageId": "v1695133679/badges/Pure_Veg111.png",
+                          "description": "pureveg"
+                        }
+                      ]
+                    },
+                    "aggregatedDiscountInfoV2": {
+                      "visible": true
+                    },
+                    "cartOrderabilityNudgeBanner": {
+                      "parameters": {
+
+                      },
+                      "presentation": {
+
+                      }
+                    },
+                    "externalRatings": {
+                      "aggregatedRating": {
+                        "rating": "4.7",
+                        "ratingCount": "3.1K+"
+                      },
+                      "source": "GOOGLE",
+                      "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+                    },
+                    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+                    "featuredSectionInfo": {
+
+                    },
+                    "showEoOffer": true
+                  },
+                  "ctaWithParams": {
+                    "link": "swiggy://menu",
+                    "type": "DEEPLINK",
+                    "params": {
+                      "query": "pizza",
+                      "sourceSessionId": "qrm302ac76d-24fa-4c89-a1e6-a6d7f0a90",
+                      "source": "SEARCH",
+                      "isSld": "false",
+                      "sourceRequestId": "00000000000000000000000000000000",
+                      "qrEnabled": "false",
+                      "restaurant_id": "746975"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.Label",
+            "text": "See full menu",
+            "textColor": "#e66d40",
+            "fontSize": 16,
+            "fontName": "FONT_NAME_BOLD",
+            "alignment": "ALIGNMENT_CENTER",
+            "borderColor": "#e46d47",
+            "borderRadius": 4,
+            "borderWidth": 1,
+            "margin": {
+              "left": 16,
+              "top": 16,
+              "right": 16,
+              "bottom": 16
+            },
+            "padding": {
+              "top": 16,
+              "bottom": 16
+            },
+            "containerBackgroundColor": "#ffffff",
+            "backgroundColor": "#ffffff",
+            "cta": {
+              "link": "/city/indore/haldirams-restaurant-opp-c-21-mall-vijay-nagar-rest746975?query=pizza",
+              "type": "DEEPLINK"
+            },
+            "maxLines": 1,
+            "analytics": {
+              "screenName": "explore-dish-widget",
+              "context": "{\"query\":\"pizza\",\"tid\":\"ee51a084-fb44-44e6-bdd5-6acc95548988\"}",
+              "objectValue": "746975",
+              "clickObjectName": "click-dish-search-full-menu"
+            }
+          }
+        }
+      },
+      {
+        "card": {
+          "card": {
+            "@type": "type.googleapis.com/swiggy.gandalf.widgets.v2.Label",
+            "text": "BACK TO SEARCH RESULTS",
+            "textColor": "#5d8ed5",
+            "fontSize": 14,
+            "fontName": "FONT_NAME_SEMI_BOLD",
+            "alignment": "ALIGNMENT_CENTER",
+            "borderColor": "#f2f3f7",
+            "margin": {
+
+            },
+            "padding": {
+              "top": 34,
+              "bottom": 80
+            },
+            "containerBackgroundColor": "#f2f3f7",
+            "backgroundColor": "#f2f3f7",
+            "cta": {
+              "link": "back",
+              "type": "static"
+            },
+            "maxLines": 1,
+            "analytics": {
+              "screenName": "explore-dish-widget",
+              "context": "{\"query\":\"pizza\",\"tid\":\"ee51a084-fb44-44e6-bdd5-6acc95548988\"}",
+              "clickObjectName": "click-back-to-search-results"
+            }
+          }
+        }
+      }
+    ],
+    "firstOffsetRequest": true
+  },
+  "tid": "ee51a084-fb44-44e6-bdd5-6acc95548988",
+  "sid": "qrm302ac76d-24fa-4c89-a1e6-a6d7f0a90",
+  "deviceId": "6d2ff302-d067-fdab-e214-330751900ba8",
+  "csrfToken": "Om9zXfMZ0l4Y-NooLxtezd_AyE4C4Qto_Sc2PNaQ"
+}]

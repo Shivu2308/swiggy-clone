@@ -8,6 +8,7 @@ const OnYourMind = ({ data, title }) => {
     
  
     const [ itemWidth ] = useOnYourMind()
+    
     const [value, canScrollLeft, canScrollRight, containerRef, handlePrev, handleNext] = useScroller({ data, itemWidth })
 
     return (

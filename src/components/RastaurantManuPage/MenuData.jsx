@@ -9,7 +9,7 @@ const MenuData = ({ menuData, resInfo }) => {
     const [ openMenus, toggalManu ] = useMenuData({ menuData})
   return (
     <>
-      {menuData.map(({ card: { card: { itemCards, categories, title, categoryId, } } }, i) => (
+      {menuData?.map(({ card: { card: { itemCards, categories, title, categoryId, } } }, i) => (
         <div key={categoryId}>
           <div className='px-5'>
             {/* {console.log(itemCards)} */}

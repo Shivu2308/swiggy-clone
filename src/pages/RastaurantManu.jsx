@@ -18,7 +18,7 @@ const RastaurantManu = () => {
   const [ navTitle, resInfo, deals, topPics, menuData, footerData,] = useRestaurantManuData()
 
 
-  if (menuData.length === 0) {
+  if (menuData?.length === 0) {
     return (
       <>
         <MenuShimmer />
@@ -35,7 +35,7 @@ const RastaurantManu = () => {
         <span className='text-[#000]'>{navTitle}</span>
       </div>
       <div className='w-full'>
-        <h1 className='font-extrabold text-lg sm:text-2xl mt-10 ml-3'>{resInfo.name}</h1>
+        <h1 className='font-extrabold text-lg sm:text-2xl mt-10 ml-3'>{resInfo?.name}</h1>
       </div>
       <div className='w-full mt-3 bg-gradient-to-t from-[#DFDFE7] to-white rounded-t-none rounded-[44px] flex justify-center items-center'>
         <div className='bg-white w-full m-5 border border-solid border-[#C0C0C0] border-opacity-80 rounded-3xl'>
@@ -45,7 +45,7 @@ const RastaurantManu = () => {
               <span className='opacity-80'>{resInfo?.avgRating}({resInfo?.totalRatingsString}) • </span>
               <span className='opacity-80'>{resInfo?.costForTwoMessage}</span>
             </div>
-            <div className='text-[13px] text-red-500 font-extrabold underline'>{(resInfo.cuisines)?.join(", ")}</div>
+            <div className='text-[13px] text-red-500 font-extrabold underline'>{(resInfo?.cuisines)?.join(", ")}</div>
             <div className='relative flex gap-3 mt-2'>
               <div className='relative bg-[#C0C0C0] w-[2px] mt-2 h-9'>
                 <div className='absolute w-[6px] h-[6px] bg-[#C0C0C0] rounded-full top-0 -left-[2px]'></div><div></div>

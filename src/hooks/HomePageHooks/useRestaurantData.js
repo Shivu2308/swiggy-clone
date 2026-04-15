@@ -23,10 +23,13 @@ const useRestaurantData = () => {
   async function fetchData() {
     setLoading(true)
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_BASE_URL}/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
-      );
-      const result = await res.json();
+      const response = await fetch(`http://localhost:5173/src/Utils/allMockData/homeMockData.json`)
+      // console.log(await response.json());
+      
+      // const res = await fetch(
+      //   `${import.meta.env.VITE_BASE_URL}/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`
+      // );
+      const result = await response.json()
 
       // console.log(result?.data)
       setUnserviceable(
@@ -56,7 +59,7 @@ const useRestaurantData = () => {
 
       setLoading(false)
     } catch (err) {
-      console.error("Failed to fetch Swiggy data:", err);
+      // console.error("Failed to fetch Swiggy data:", err);
     }
   }
 

@@ -27,7 +27,7 @@ const useSignInPage = () => {
       dispatch(addUserData(userData));
       dispatch(toggleLoginBar())
     } catch (err) {
-      console.log(err);
+      // console.log(err);
     }
   }
 

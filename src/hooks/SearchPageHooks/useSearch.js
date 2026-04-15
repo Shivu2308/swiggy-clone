@@ -13,7 +13,8 @@ const useSearch = () => {
 
   const { lat, lng } = useSelector((state) => state.cordinatesSlice.cordinates);
 
-  const { isSameDishWithSameRast, city, resLocation, resId, itemId } = useSelector((state) => state.toggleSlice.sameDishRastPage);
+  const { isSameDishWithSameRast, city, resLocation, resId, itemId } =
+    useSelector((state) => state.toggleSlice.sameDishRastPage);
 
   // console.log(isSameDishWithSameRast, city, resLocation, resId, itemId)
 
@@ -39,28 +40,86 @@ const useSearch = () => {
   async function fetchDishes() {
     setLoading(true);
     let data = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=ed4c626f-9438-e0fc-5f18-c07f78b82f12&metaData=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22NA%22%2C%22cloudinaryId%22%3A%22btrmbvwdfin5wp4dw1v7%22%2C%22dishFamilyId%22%3A%22846516%22%2C%22dishFamilyIds%22%3A%5B%22846516%22%5D%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D`
+      `${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/dishes.json`,
     );
-    let res = await data.json();
+    let result = await data.json();
+
+    // console.log(res);
+
+    function getResultFromQuery(r) {
+      return r.find((res) => {
+        try {
+          const tabs = res.data.cards[0].card.card.tab;
+          return tabs.some((tab) => {
+            const context = JSON.parse(tab.analytics.context);
+            return (
+              context.query?.trim().toLowerCase() ===
+              searchQuery?.trim().toLowerCase()
+            );
+          });
+        } catch {
+          return false;
+        }
+      });
+    }
+
+    let res = getResultFromQuery(result)
+
     // console.log((res?.data?.cards[1]?.groupedCard?.cardGroupMap?.DISH?.cards).filter((data) => data.card?.card?.info))
-    let dishesData =
-      res?.data?.cards[1]?.groupedCard?.cardGroupMap?.DISH?.cards?.filter(
-        (data) => data.card?.card?.info
-      );
+    let dishesData = res?.data?.cards[1]?.groupedCard?.cardGroupMap?.DISH?.cards?.filter(
+      (data) => data.card?.card?.info,
+    );
     setDishes(dishesData);
+    // console.log(dishesData);
+
     setLoading(false);
   }
 
   async function fetchRestaurants() {
     let data = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=ed4c626f-9438-e0fc-5f18-c07f78b82f12&metaData=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22NA%22%2C%22cloudinaryId%22%3A%22btrmbvwdfin5wp4dw1v7%22%2C%22dishFamilyId%22%3A%22846516%22%2C%22dishFamilyIds%22%3A%5B%22846516%22%5D%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D&selectedPLTab=RESTAURANT`
+      `${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/disRestaurantData.json`,
     );
-    let res = await data.json();
+    // let data = await fetch(
+    //   `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=ed4c626f-9438-e0fc-5f18-c07f78b82f12&metaData=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22NA%22%2C%22cloudinaryId%22%3A%22btrmbvwdfin5wp4dw1v7%22%2C%22dishFamilyId%22%3A%22846516%22%2C%22dishFamilyIds%22%3A%5B%22846516%22%5D%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D&selectedPLTab=RESTAURANT`,
+    // );
+    let result = await data.json();
+
+    // console.log(res);
+
+    function getResultFromQuery(responses) {
+      return responses.find((res) => {
+        try {
+          const restaurantCards =
+            res?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards;
+          if (!restaurantCards) return false;
+          return restaurantCards.some((item) => {
+            const contextString = item?.card?.card?.analytics?.context;
+            if (!contextString) return false;
+
+            const contextObj = JSON.parse(contextString);
+
+            return (
+              contextObj.query?.toLowerCase().trim() ===
+              searchQuery?.trim().toLowerCase()
+            );
+          });
+        } catch (error) {
+          return false; 
+        }
+      });
+    }
+
+    let res = getResultFromQuery(result)
+
+    
+
     // console.log((res?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards).filter((data) => data.card?.card?.info))
     let rastaurantsData =
       res?.data?.cards[0]?.groupedCard?.cardGroupMap?.RESTAURANT?.cards?.filter(
-        (data) => data.card?.card?.info
+        (data) => data.card?.card?.info,
       );
+    // console.log(rastaurantsData);
+
     setRastaurantsData(rastaurantsData);
   }
 
@@ -69,7 +128,7 @@ const useSearch = () => {
     let encodedPath = encodeURIComponent(pathName);
 
     let data = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=ENTER&selectedPLTab=dish-add&restaurantMenuUrl=${encodedPath}-rest${resId}%3Fquery%3D${searchQuery}&restaurantIdOfAddedItem=${resId}&itemAdded=${itemId}`
+      `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=ENTER&selectedPLTab=dish-add&restaurantMenuUrl=${encodedPath}-rest${resId}%3Fquery%3D${searchQuery}&restaurantIdOfAddedItem=${resId}&itemAdded=${itemId}`,
     );
     let res = await data.json();
     // console.log(res?.data?.cards[1]?.card?.card)
@@ -104,7 +163,17 @@ const useSearch = () => {
     }
   }
 
-  return [dishes, rastaurantsData, sameDish, sameDishWithRast, activeBtn, loading, filterOptions, handleFilterBtn, handleSearchQuery];
+  return [
+    dishes,
+    rastaurantsData,
+    sameDish,
+    sameDishWithRast,
+    activeBtn,
+    loading,
+    filterOptions,
+    handleFilterBtn,
+    handleSearchQuery,
+  ];
 };
 
 export default useSearch;

@@ -20,7 +20,7 @@ const useScroller = ({ data, itemWidth }) => {
 
   // React to value change
   useEffect(() => {
-    if (containerRef.current && data.length > 0) {
+    if (containerRef.current && data?.length > 0) {
       updateScrollButtons(value);
     }
   }, [value, data]);

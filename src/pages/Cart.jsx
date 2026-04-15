@@ -55,8 +55,9 @@ const Cart = () => {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: totalPrice * 100, // paise me
       currency: "INR",
-      name: "My App",
+      name: "swiggy",
       description: "Test Transaction",
+      image: assets.swiggyicon,
 
       handler: function (response) {
         toast.success("Payment Successful!");
