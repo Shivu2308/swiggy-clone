@@ -23,7 +23,7 @@ const useRestaurantData = () => {
   async function fetchData() {
     setLoading(true)
     try {
-      const response = await fetch(`http://localhost:5173/src/Utils/allMockData/homeMockData.json`)
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/homeMockData.json`)
       // console.log(await response.json());
       
       // const res = await fetch(
