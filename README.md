@@ -3,7 +3,7 @@
 A high-performance, fully responsive food ordering web application built with **React.js**, **Tailwind CSS**, **Redux Toolkit**, and **Firebase**. This project replicates the core Swiggy experience, focusing on complex data mapping, state management, and a modern UI.
 
 ## 🌐 Live Demo
-Check out the live project here: [Insert Your Vercel Link Here]
+Check out the live project here: **https://swiggy-clone-seven-mu.vercel.app/**
 
 ## 🚀 Key Features
 
