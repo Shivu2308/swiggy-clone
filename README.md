@@ -55,7 +55,7 @@ swiggy-clone/
 │   ├── App.jsx              # Main Router
 │   └── main.jsx             # Entry point
 └── public/                  # Static assets
-    ├── allMockData/     # JSON files for testing
+    └──  allMockData/     # JSON files for testing
 
 ```
 
