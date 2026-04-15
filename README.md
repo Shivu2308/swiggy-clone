@@ -71,7 +71,7 @@ Follow these steps to run the project locally:
    ```
    bash
 
-   git clone [https://github.com/your-username/swiggy-clone.git](https://github.com/your-username/swiggy-clone.git)
+   git clone https://github.com/Shivu2308/swiggy-clone.git
 
    ```
 
