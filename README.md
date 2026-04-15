@@ -50,12 +50,12 @@ swiggy-clone/
 │   │   └── SearchPageHooks/ 
 │   ├── pages/               # Main Page Components (Routes)
 │   ├── Utils/               # Redux State & Mock Data
-│   │   ├── allMockData/     # JSON files for testing
 │   │   ├── store.js         # Central Redux Store
 │   │   └── slices/          # Redux Slices (Cart, Auth, etc.)
 │   ├── App.jsx              # Main Router
 │   └── main.jsx             # Entry point
 └── public/                  # Static assets
+    ├── allMockData/     # JSON files for testing
 
 ```
 
