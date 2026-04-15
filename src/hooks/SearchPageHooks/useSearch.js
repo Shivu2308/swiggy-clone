@@ -40,7 +40,7 @@ const useSearch = () => {
   async function fetchDishes() {
     setLoading(true);
     let data = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/dishes.json`,
+      `/allMockData/dishes.json`,
     );
     let result = await data.json();
 
@@ -77,7 +77,7 @@ const useSearch = () => {
 
   async function fetchRestaurants() {
     let data = await fetch(
-      `${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/disRestaurantData.json`,
+      `/allMockData/disRestaurantData.json`,
     );
     // let data = await fetch(
     //   `${import.meta.env.VITE_BASE_URL}/restaurants/search/v3?lat=${lat}&lng=${lng}&str=${searchQuery}&trackingId=undefined&submitAction=SUGGESTION&queryUniqueId=ed4c626f-9438-e0fc-5f18-c07f78b82f12&metaData=%7B%22type%22%3A%22DISH%22%2C%22data%22%3A%7B%22vegIdentifier%22%3A%22NA%22%2C%22cloudinaryId%22%3A%22btrmbvwdfin5wp4dw1v7%22%2C%22dishFamilyId%22%3A%22846516%22%2C%22dishFamilyIds%22%3A%5B%22846516%22%5D%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Dish%22%7D&selectedPLTab=RESTAURANT`,

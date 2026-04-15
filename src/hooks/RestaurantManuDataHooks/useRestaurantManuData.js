@@ -22,8 +22,8 @@ const useRestaurantManuData = () => {
 
   async function fetchMenu() {
     const [data1, data2] = await Promise.all([
-      fetch(`${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/allRestaurantManuData1.json`),
-      fetch(`${import.meta.env.VITE_BASE_URL}/src/Utils/allMockData/allRestaurantManuData2.json`)
+      fetch(`/allMockData/allRestaurantManuData1.json`),
+      fetch(`/allMockData/allRestaurantManuData2.json`)
     ]);
 
     if (!data1.ok || !data2.ok) {
@@ -31,15 +31,15 @@ const useRestaurantManuData = () => {
     }
 
     const res1 = await data1.json();
-    console.log("res1 = ",res1);
+    // console.log("res1 = ",res1);
     
     const res2 = await data2.json();
-    console.log("res2 = ",res2);
+    // console.log("res2 = ",res2);
     
 
     let response = [...res1, ...res2];
 
-    console.log("res1+res2 =",response);
+    // console.log("res1+res2 =",response);
     
     const res = response?.find(rast =>rast?.data?.cards?.find(idCard => idCard?.card?.card?.info?.id  === mainId || idCard?.card?.card?.info?.sla?.restaurantId === mainId))
     // console.log(response?.find(rast =>rast?.data?.cards?.find(idCard => idCard?.card?.card?.info?.id === mainId || idCard?.card?.card?.info?.sla?.restaurantId === mainId)));
